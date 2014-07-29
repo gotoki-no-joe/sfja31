@@ -4,9 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="coqdoc.css" rel="stylesheet" type="text/css"/>
-<title>Preface</title>
-<script type="text/javascript" src="jquery-1.8.3.js"></script>
-<script type="text/javascript" src="main.js"></script>
+<title></title>
 </head>
 
 <body>
@@ -18,132 +16,104 @@
 
 <div id="main">
 
-<h1 class="libtitle">Preface</h1>
+<h1 class="libtitle">Library Preface</h1>
 
-<div class="code code-tight">
+<div class="code">
 </div>
 
 <div class="doc">
+<a name="lab1"></a><h1 class="section">前書き</h1>
 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab1"></a><h1 class="section">Welcome</h1>
+<a name="lab2"></a><h1 class="section">ようこそ</h1>
 
-<div class="paragraph"> </div>
-
- This electronic book is a course on <i>Software Foundations</i>, the
-    mathematical underpinnings of reliable software.  Topics include
-    basic concepts of logic, computer-assisted theorem proving and the
-    Coq proof assistant, functional programming, operational
-    semantics, Hoare logic, and static type systems.  The exposition
-    is intended for a broad range of readers, from advanced
-    undergraduates to PhD students and researchers.  No specific
-    background in logic or programming languages is assumed, though a
-    degree of mathematical maturity will be helpful.
-
-<div class="paragraph"> </div>
-
-    One novelty of the course is that it is one hundred per cent
-    formalized and machine-checked: the entire text is literally a
-    script for Coq.  It is intended to be read alongside an
-    interactive session with Coq.  All the details in the text are
-    fully formalized in Coq, and the exercises are designed to be
-    worked using Coq.
-
-<div class="paragraph"> </div>
-
-    The files are organized into a sequence of core chapters, covering
-    about one semester's worth of material and organized into a
-    coherent linear narrative, plus a number of "appendices" covering
-    additional topics.  All the core chapters are suitable for both
-    graduate and upper-level undergraduate students. 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab2"></a><h1 class="section">Overview</h1>
+この電子文章は「ソフトウェアの基礎（プログラミングとプログラミング言語の数学的理論）」という、大学後半〜院生向けの1学期分の講義のために書かれたものです。この講義では、Coq上で関数プログラミング、論理学、操作的意味論、Hoare論理、静的型システムの基礎を学ぶことができます。論理学やプログラミング言語に関する特定の予備知識は必要ありませんが、ある程度数学に通じていると理解の助けとなるでしょう。
 
 <div class="paragraph"> </div>
 
- Building reliable software is hard.  The scale and complexity of
-    modern software systems, the number of people involved in building
-    them, and the range of demands placed on them make it extremely
-    difficult to build software that works as intended, even most of
-    the time.  At the same time, the increasing degree to which
-    software is woven into almost every aspect of our society
-    continually amplifies the cost of bugs and insecurities.
+このコースの重要な特徴は、教材のテキストがCoqのスクリプトファイルそのものとなっており、学習の進み具合を「形式的」かつ「機械的」に確認しながら学んでいくことができる、ということです。このコースでは、Coqの対話モードを使って、ソースを1行1行追いながら動きを理解していきます。講義のほとんどはCoqで組み立てられ、Coq上で作業し演習するようデザインされています。
 
 <div class="paragraph"> </div>
 
-    Computer science and software engineering have responded to these
-    challenges by developing a whole host of techniques for improving
-    software reliability, ranging from recommendations about managing
-    software projects and structuring programming teams (e.g., extreme
-    programming) to design philosophies for libraries (e.g.,
-    model-view-controller, publish-subscribe, etc.) and programming
-    languages (e.g., object-oriented programming, aspect-oriented
-    programming, functional programming), to mathematical techniques
-    for specifying and reasoning about properties of software and
-    tools for helping validate these properties.  
+このファイルは章立てされ整理されており、1学期ぶんの教材として十分で、順番に学習していけるよう、筋道立てて作成されています。さらに加えて、いくつかのトピックについて追加項目があります。 
+</div>
+<div class="code">
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab3"></a><h1 class="section">概要</h1>
+
+</div>
+<div class="code">
+
+<br/>
+</div>
+
+<div class="doc">
+信頼できるソフトウェアの構築は困難です。意図通りに動作するソフトウェアの構築は難しいものですが、現代のソフトウェアシステムのスケールと複雑さ、その構築に関わる人数、それに課せられる要求の幅広さ、によりさらに困難さは極まっています。同時に、私たちの社会のあらゆる側面にソフトウェアが組み込まれてきて、バグとセキュリティのコストは増大しています。
 
 <div class="paragraph"> </div>
 
-    The present course is focused on this last set of techniques.  The
-    text weaves together five conceptual threads:
+コンピュータサイエンスとソフトウェア工学は、この問題に対応するためにソフトウェアの信頼性を向上させる数多くの技法を開発してきました。その範囲は、ソフトウェアプロジェクトの管理と開発チームの構成（例：エクストリームプログラミング）、ライブラリの設計哲学（例：MVC、publish-subscribeなど）、プログラミング言語（例：オブジェクト指向プログラミング、アスペクト指向プログラミング、関数型プログラミング）から、ソフトウェアの性質の仕様化と論証のための数学的技法とそれらの性質の検証を支援するツールまで多岐にわたります。
 
 <div class="paragraph"> </div>
 
-    (1) basic tools from <i>logic</i> for making and justifying precise
-        claims about programs;
+このコースはこの最後に挙げた技法に焦点をあてています。このテキストは次の5つの概念を綴り合わせたものです。
 
 <div class="paragraph"> </div>
 
-    (2) the use of <i>proof assistants</i> to construct rigorous logical
-        arguments;
+  (1) プログラムの要求を記述し正当性を確認するための_論理学_の基本的ツール
 
 <div class="paragraph"> </div>
 
-    (3) the idea of <i>functional programming</i>, both as a method of
-        programming and as a bridge between programming and logic;
+  (2) 厳格な論理的推論を構築するための_証明支援系_の利用
 
 <div class="paragraph"> </div>
 
-    (4) formal techniques for <i>reasoning about the properties of
-        specific programs</i> (e.g., that a loop terminates on all
-        inputs, or that a sorting function actually fulfills its
-        specification); and
+  (3) プログラミングの道具として、またプログラミングと論理の架け橋としての、_関数型プログラミング_の考え方
 
 <div class="paragraph"> </div>
 
-    (5) the use of <i>type systems</i> for establishing well-behavedness
-        guarantees for <i>all</i> programs in a given programming
-        language (e.g., the fact that well-typed Java programs cannot
-        be subverted at runtime).
+  (4) _特定のプログラムの性質を推論する_形式的技法（例えば、いかなる入力でもループが停止するか、整列を行うプログラムが実際にその仕様を満たすか）
 
 <div class="paragraph"> </div>
 
-    Each of these topics is easily rich enough to fill a whole course
-    in its own right; taking all of them together naturally means that
-    much will be left unsaid.  But we hope readers will agree that the
+  (5) 与えられたプログラミング言語の_あらゆる_プログラムのよい振る舞いを保証するための_型システム_の利用（例えば、型の正しいJavaプログラムは実行時に異常終了しないという事実）
+
+<div class="paragraph"> </div>
+
+これらの話題のそれぞれはそれ自身で1つのコースになる「濃い」ものです。それらを全てとりあげるということはつまり、言及できない事柄も多く残されるということです。But we hope readers will agree that the
     themes illuminate and amplify each other in useful ways, and that
     bringing them together creates a foundation from which it will be
     easy to dig into any of them more deeply.  Some suggestions for
     supplemental texts can be found in the <span class="inlinecode"><span class="id" type="var">Postscript</span></span> chapter. 
+</div>
+<div class="code">
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab4"></a><h2 class="section">論理学</h2>
+
 <div class="paragraph"> </div>
 
-<a name="lab3"></a><h2 class="section">Logic</h2>
-
-<div class="paragraph"> </div>
-
- Logic is the field of study whose subject matter is <i>proofs</i> &mdash;
+ Logic is the field of study whose subject matter is <i>proofs</i> --
     unassailable arguments for the truth of particular propositions.
 
 <div class="paragraph"> </div>
@@ -161,9 +131,14 @@
    before, in contexts from discrete math to analysis of algorithms,
    but in this course we will examine them much more deeply than you
    have probably done so far. 
-<div class="paragraph"> </div>
+</div>
+<div class="code">
 
-<a name="lab4"></a><h2 class="section">Proof Assistants</h2>
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab5"></a><h2 class="section">証明支援系</h2>
 
 <div class="paragraph"> </div>
 
@@ -260,7 +235,7 @@
       the Coq formalization, everything is checked, including the
       correctness of the computational part.  More recently, an even
       more massive effort led to a Coq formalization of the
-      Feit-Thompson Theorem &mdash; the first major step in the
+      Feit-Thompson Theorem -- the first major step in the
       classification of finite simple groups. 
 
 </li>
@@ -277,9 +252,14 @@
    is also the national symbol of France, and "Coq" are the first
    three letters of the name of Thierry Coquand, one of Coq's early
    developers. 
-<div class="paragraph"> </div>
+</div>
+<div class="code">
 
-<a name="lab5"></a><h2 class="section">Functional Programming</h2>
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab6"></a><h2 class="section">関数型プログラミング</h2>
 
 <div class="paragraph"> </div>
 
@@ -293,7 +273,7 @@
 <div class="paragraph"> </div>
 
     Functional programming has been developed by researchers over many
-    decades &mdash; indeed, its roots go back to Church's lambda-calculus,
+    decades -- indeed, its roots go back to Church's lambda-calculus,
     developed in the 1930s before the era of the computer began!  But
     in the past two decades it has enjoyed a surge of interest among
     industrial engineers and language designers, playing a key role in
@@ -349,10 +329,15 @@
     language, together with a set of tools for stating and proving
     logical assertions.  However, when we come to look more closely,
     we will find that these two sides of Coq are actually aspects of
-    the very same underlying machinery &mdash; i.e., <i>proofs are programs</i>. 
-<div class="paragraph"> </div>
+    the very same underlying machinery -- i.e., <i>proofs are programs</i>. 
+</div>
+<div class="code">
 
-<a name="lab6"></a><h2 class="section">Program Verification</h2>
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab7"></a><h2 class="section">プログラムの検証</h2>
 
 <div class="paragraph"> </div>
 
@@ -396,7 +381,7 @@
     First, we consider what it means to say that two Imp programs are
     <i>equivalent</i> in the sense that they give the same behaviors for
     all initial memories.  This notion of equivalence then becomes a
-    criterion for judging the correctness of <i>metaprograms</i> &mdash;
+    criterion for judging the correctness of <i>metaprograms</i> --
     programs that manipulate other programs, such as compilers and
     optimizers.  We build a simple optimizer for Imp and prove that it
     is correct.
@@ -405,10 +390,10 @@
 
     Second, we develop a methodology for proving that Imp programs
     satisfy some formal specification of their behavior.  We introduce
-    the notion of <i>Hoare triples</i> &mdash; Imp programs annotated with pre-
+    the notion of <i>Hoare triples</i> -- Imp programs annotated with pre-
     and post-conditions describing what should be true about the
     memory in which they are started and what they promise to make
-    true about the memory in which they terminate &mdash; and the reasoning
+    true about the memory in which they terminate -- and the reasoning
     principles of <i>Hoare Logic</i>, a "domain-specific logic" specialized
     for convenient compositional reasoning about imperative programs,
     with concepts like "loop invariant" built in.
@@ -422,9 +407,14 @@
 <div class="paragraph"> </div>
 
 
-<div class="paragraph"> </div>
+</div>
+<div class="code">
 
-<a name="lab7"></a><h2 class="section">Type Systems</h2>
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab8"></a><h2 class="section">型システム</h2>
 
 <div class="paragraph"> </div>
 
@@ -437,7 +427,7 @@
     Type systems are the best established and most popular example of
     a highly successful class of formal verification techniques known
     as <i>lightweight formal methods</i>.  These are reasoning techniques
-    of modest power &mdash; modest enough that automatic checkers can be
+    of modest power -- modest enough that automatic checkers can be
     built into compilers, linkers, or program analyzers and thus be
     applied even by programmers unfamiliar with the underlying
     theories.  (Other examples of lightweight formal methods include
@@ -457,22 +447,22 @@
 
 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab8"></a><h1 class="section">Practicalities</h1>
+<a name="lab9"></a><h1 class="section">実用性</h1>
 
 </div>
-<div class="code code-space">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab9"></a><h2 class="section">System Requirements</h2>
+<a name="lab10"></a><h2 class="section">学習に必要なもの</h2>
 
 <div class="paragraph"> </div>
 
@@ -512,123 +502,146 @@
 
 </li>
 </ul>
+ Coqは、Windowsと多くのUNIX系OS（LinuxやMacOS Xを含む）で動きます。具体的には
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> Coqホームページにある最新版のCoq。（全てのサンプルソースはバージョン8.4でコンパイルできることが確認されています）
+
+</li>
+<li> Coqを対話的に操作するIDE。現在、以下の二つから選択できます。
+<ul class="doclist">
+<li> ProofGeneralは、Emacs上に作られたIDEです。すでにEmacsに慣れている人向けのものです。Coqとは別にインストールする必要があります。（詳しくはgoogleで"ProofGeneral"を検索してください）
+
+</li>
+<li> CoqIDEは、スタンドアロンで動作するシンプルなIDEです。Coqと一緒に配布されています。しかしいくつかのプラットホームではGUIライブラリなどの追加パッケージをインストールする必要があります。 
+</li>
+</ul>
+
+</li>
+</ul>
 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab10"></a><h2 class="section">Exercises</h2>
+<a name="lab11"></a><h2 class="section">練習問題について</h2>
 
-<div class="paragraph"> </div>
+</div>
+<div class="code">
 
- Each chapter includes numerous exercises.  Each is marked with a
-    "star rating," which can be interpreted as follows:
+<br/>
+</div>
+
+<div class="doc">
+各章には、たくさんの練習問題がついています。練習問題についている星印の数には、以下のような意味があります。
 
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> One star: easy exercises that underscore points in the text
-         and that, for most readers, should take only a minute or two.
-         Get in the habit of working these as you reach them.
+<li> ★　テキストのポイントを強調する簡単な問題で、たいていの読者は1〜2分でできる。遭遇したら取り組むことを習慣にしましょう。
+
+<div class="paragraph"> </div>
+
 
 <div class="paragraph"> </div>
 
 
 </li>
-<li> Two stars: straightforward exercises (five or ten minutes).
+<li> ★★　素直で簡単な問題（5〜10分でできるでしょう）
 
 <div class="paragraph"> </div>
 
 
 </li>
-<li> Three stars: exercises requiring a bit of thought (ten
-         minutes to half an hour).
+<li> ★★★　少し考えないといけない問題（15〜30分ほどかかるでしょう）
 
 <div class="paragraph"> </div>
 
 
 </li>
-<li> Four and five stars: more difficult exercises (half an hour
-         and up).
+<li> ★★★★　さらに難しい問題（1〜2時間）
 
 </li>
 </ul>
 
 <div class="paragraph"> </div>
 
-    Also, some exercises are marked "advanced", and some are marked
-    "optional."  Doing just the non-optional, non-advanced exercises
-    should provide good coverage of the core material.  "Advanced"
-    exercises are for readers who want an extra challenge (and, in
-    return, a deeper contact with the material).  "Optional" exercises
-    provide a bit of extra practice with key concepts and introduce
-    secondary themes that may be of interest to some readers. 
+「発展(advanced)」「任意(optional)」と記されている問題があります。
+章の主要な題材はいずれの印もない問題だけで充分カバーできます。
+"発展"問題はさらに挑戦したい（そしてその見返りとしての題材の深い理解を得たい）読者のためのものです。"任意"問題は主な概念に関する少し追加の練習を提供し、読者によっては興味をもつ副次的な話題を紹介しています。 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab11"></a><h2 class="section">Chapter Dependencies</h2>
+<a name="lab12"></a><h2 class="section">章間の依存関係</h2>
 
-<div class="paragraph"> </div>
-
- A diagram of the dependencies between chapters and some suggested
-    paths through the material can be found in the file <span class="inlinecode"><span class="id" type="var">deps.html</span></span>. 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab12"></a><h2 class="section">Downloading the Coq Files</h2>
+章と章の間の依存関係と推奨する学習順序をまとめた図を<span class="inlinecode"><span class="id" type="var">deps_J.html</span></span>にまとめてあります。 
+</div>
+<div class="code">
 
-<div class="paragraph"> </div>
+<br/>
+</div>
 
- A tar file containing the full sources for the "release version"
-    of these notes (as a collection of Coq scripts and HTML files) is
-    available here:
+<div class="doc">
+<a name="lab13"></a><h2 class="section">本教材Coqファイルの入手方法</h2>
+
+</div>
+<div class="code">
+
+<br/>
+</div>
+
+<div class="doc">
+この教材のリリース版のソース（CoqスクリプトとHTMLファイル）をtarで固めたものが、以下のURLで取得できます。
 <pre>
-        http://www.cis.upenn.edu/~bcpierce/sf   
+        http://www.cis.upenn.edu/~bcpierce/sf
 </pre>
-    If you are using the notes as part of a class, you may be given
-    access to a locally extended version of the files, which you
-    should use instead of the release version.
+    この資料を講義で利用している場合は、リリース版ではなくローカルに展開された版にアクセスする権限が与えられているかもしれません。
 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab13"></a><h1 class="section">Note for Instructors</h1>
+<a name="lab14"></a><h1 class="section">教育関係者へ</h1>
 
-<div class="paragraph"> </div>
-
- If you intend to use these materials in your own course, you will
-    undoubtedly find things you'd like to change, improve, or add.
-    Your contributions are welcome!
-
-<div class="paragraph"> </div>
-
-    Please send an email to Benjamin Pierce, and we'll set you up with
-    read/write access to our subversion repository and developers'
-    mailing list; in the repository you'll find a <span class="inlinecode"><span class="id" type="var">README</span></span> with further
-    instructions. 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab14"></a><h1 class="section">Translations</h1>
+この資料を自分の講義で使おうと思った場合、ほぼまちがいなくあなたは書き直したり、追加したりしたいところが出てくるでしょう。そういった貢献は大歓迎です。
+
+<div class="paragraph"> </div>
+
+ぜひBenjamin Pierceまでemailをください。subversionのリポジトリと開発者メーリングリストにアカウントを用意します。リポジトリにはREADMEファイルがありますので、次にどうすべきかはそれを参照してください。 
+</div>
+<div class="code">
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab15"></a><h1 class="section">Translations</h1>
 
 <div class="paragraph"> </div>
 
@@ -644,17 +657,153 @@
 </ul>
 
 </div>
-<div class="code code-tight">
+<div class="code">
 
 <br/>
-<span class="comment">(*&nbsp;$Date:&nbsp;2014-06-05&nbsp;07:22:21&nbsp;-0400&nbsp;(Thu,&nbsp;05&nbsp;Jun&nbsp;2014)&nbsp;$&nbsp;*)</span><br/>
 
 <br/>
 </div>
-</div>
-
-<div id="footer">
-<hr/><a href="coqindex.html">Index</a><hr/>This page has been generated by <a href="http://www.lix.polytechnique.fr/coq/">coqdoc</a>
+<table>
+<tr>
+<td>Global Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#global_P">P</a></td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(1 entry)</td>
+</tr>
+<tr>
+<td>Library Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#library_P">P</a></td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(1 entry)</td>
+</tr>
+</table>
+<hr/>
+<h1>Global Index</h1>
+<a name="global_P"></a><h2>P </h2>
+<a href="Preface.html">Preface</a> [library]<br/>
+<br/><br/><hr/>
+<h1>Library Index</h1>
+<a name="library_P"></a><h2>P </h2>
+<a href="Preface.html">Preface</a> <br/>
+<br/><br/><hr/><table>
+<tr>
+<td>Global Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#global_P">P</a></td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(1 entry)</td>
+</tr>
+<tr>
+<td>Library Index</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>E</td>
+<td>F</td>
+<td>G</td>
+<td>H</td>
+<td>I</td>
+<td>J</td>
+<td>K</td>
+<td>L</td>
+<td>M</td>
+<td>N</td>
+<td>O</td>
+<td><a href="index.html#library_P">P</a></td>
+<td>Q</td>
+<td>R</td>
+<td>S</td>
+<td>T</td>
+<td>U</td>
+<td>V</td>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+<td>_</td>
+<td>other</td>
+<td>(1 entry)</td>
+</tr>
+</table>
+<hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
 </div>
 
 </div>

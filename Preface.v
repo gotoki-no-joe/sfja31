@@ -1,9 +1,11 @@
-(** * Preface *)
+(* * Preface *)
+(** * 前書き *)
 
 (* ###################################################################### *)
-(** * Welcome *)
+(* * Welcome *)
+(** * ようこそ *)
 
-(** This electronic book is a course on _Software Foundations_, the
+(*  This electronic book is a course on _Software Foundations_, the
     mathematical underpinnings of reliable software.  Topics include
     basic concepts of logic, computer-assisted theorem proving and the
     Coq proof assistant, functional programming, operational
@@ -25,12 +27,19 @@
     coherent linear narrative, plus a number of "appendices" covering
     additional topics.  All the core chapters are suitable for both
     graduate and upper-level undergraduate students. *)
+(** この電子文章は「ソフトウェアの基礎（プログラミングとプログラミング言語の数学的理論）」という、大学後半〜院生向けの1学期分の講義のために書かれたものです。この講義では、Coq上で関数プログラミング、論理学、操作的意味論、Hoare論理、静的型システムの基礎を学ぶことができます。論理学やプログラミング言語に関する特定の予備知識は必要ありませんが、ある程度数学に通じていると理解の助けとなるでしょう。
+
+このコースの重要な特徴は、教材のテキストがCoqのスクリプトファイルそのものとなっており、学習の進み具合を「形式的」かつ「機械的」に確認しながら学んでいくことができる、ということです。このコースでは、Coqの対話モードを使って、ソースを1行1行追いながら動きを理解していきます。講義のほとんどはCoqで組み立てられ、Coq上で作業し演習するようデザインされています。
+
+このファイルは章立てされ整理されており、1学期ぶんの教材として十分で、順番に学習していけるよう、筋道立てて作成されています。さらに加えて、いくつかのトピックについて追加項目があります。 *)
+(* JOE 意訳が多い。*)
 
 
 (* ###################################################################### *)
-(** * Overview *)
+(* * Overview *)
+(** * 概要 *)
 
-(** Building reliable software is hard.  The scale and complexity of
+(*  Building reliable software is hard.  The scale and complexity of
     modern software systems, the number of people involved in building
     them, and the range of demands placed on them make it extremely
     difficult to build software that works as intended, even most of
@@ -78,8 +87,31 @@
     bringing them together creates a foundation from which it will be
     easy to dig into any of them more deeply.  Some suggestions for
     supplemental texts can be found in the [Postscript] chapter. *)
+(** 信頼できるソフトウェアの構築は困難です。意図通りに動作するソフトウェアの構築は難しいものですが、現代のソフトウェアシステムのスケールと複雑さ、その構築に関わる人数、それに課せられる要求の幅広さ、によりさらに困難さは極まっています。同時に、私たちの社会のあらゆる側面にソフトウェアが組み込まれてきて、バグとセキュリティのコストは増大しています。
 
-(** ** Logic *)
+コンピュータサイエンスとソフトウェア工学は、この問題に対応するためにソフトウェアの信頼性を向上させる数多くの技法を開発してきました。その範囲は、ソフトウェアプロジェクトの管理と開発チームの構成（例：エクストリームプログラミング）、ライブラリの設計哲学（例：MVC、publish-subscribeなど）、プログラミング言語（例：オブジェクト指向プログラミング、アスペクト指向プログラミング、関数型プログラミング）から、ソフトウェアの性質の仕様化と論証のための数学的技法とそれらの性質の検証を支援するツールまで多岐にわたります。
+
+このコースはこの最後に挙げた技法に焦点をあてています。このテキストは次の5つの概念を綴り合わせたものです。
+
+  (1) プログラムの要求を記述し正当性を確認するための_論理学_の基本的ツール
+
+  (2) 厳格な論理的推論を構築するための_証明支援系_の利用
+
+  (3) プログラミングの道具として、またプログラミングと論理の架け橋としての、_関数型プログラミング_の考え方
+
+  (4) _特定のプログラムの性質を推論する_形式的技法（例えば、いかなる入力でもループが停止するか、整列を行うプログラムが実際にその仕様を満たすか）
+
+  (5) 与えられたプログラミング言語の_あらゆる_プログラムのよい振る舞いを保証するための_型システム_の利用（例えば、型の正しいJavaプログラムは実行時に異常終了しないという事実）
+
+これらの話題のそれぞれはそれ自身で1つのコースになる「濃い」ものです。それらを全てとりあげるということはつまり、言及できない事柄も多く残されるということです。But we hope readers will agree that the
+    themes illuminate and amplify each other in useful ways, and that
+    bringing them together creates a foundation from which it will be
+    easy to dig into any of them more deeply.  Some suggestions for
+    supplemental texts can be found in the [Postscript] chapter. *)
+(* JOE *)
+
+(* ** Logic *)
+(** ** 論理学 *)
 
 (** Logic is the field of study whose subject matter is _proofs_ --
     unassailable arguments for the truth of particular propositions.
@@ -96,7 +128,8 @@
    but in this course we will examine them much more deeply than you
    have probably done so far. *)
 
-(** ** Proof Assistants *)
+(* ** Proof Assistants *)
+(** ** 証明支援系 *)
 
 (** The flow of ideas between logic and computer science has not gone
     only one way: CS has made its own contributions to logic.  One of
@@ -175,7 +208,8 @@
    three letters of the name of Thierry Coquand, one of Coq's early
    developers. *)
 
-(** ** Functional Programming *)
+(* ** Functional Programming *)
+(** ** 関数型プログラミング *)
 
 (** The term _functional programming_ refers both to a collection of
     programming idioms that can be used in almost any programming
@@ -235,7 +269,8 @@
     we will find that these two sides of Coq are actually aspects of
     the very same underlying machinery -- i.e., _proofs are programs_. *)
 
-(** ** Program Verification *)
+(* ** Program Verification *)
+(** ** プログラムの検証 *)
 
 (** The first third of the book is devoted to developing the
     conceptual framework of logic and functional programming and to
@@ -292,7 +327,8 @@
 
 *)
 
-(** ** Type Systems *)
+(* ** Type Systems *)
+(** ** 型システム *)
 
 (** Our final major topic, covering the last third of the course, is
     _type systems_, a powerful set of tools for establishing
@@ -318,10 +354,12 @@
 *)
 
 (* ###################################################################### *)
-(** * Practicalities *)
+(* * Practicalities *)
+(** * 実用性 *)
 
 (* ###################################################################### *)
-(** ** System Requirements *)
+(* ** System Requirements *)
+(** ** 学習に必要なもの *)
 
 (** Coq runs on Windows, Linux, and OS X.  You will need:
 
@@ -340,11 +378,17 @@
              with Coq, but on some platforms compiling it involves
              installing additional packages for GUI libraries and
              such. *)
+(** Coqは、Windowsと多くのUNIX系OS（LinuxやMacOS Xを含む）で動きます。具体的には
+       - Coqホームページにある最新版のCoq。（全てのサンプルソースはバージョン8.4でコンパイルできることが確認されています）
+       - Coqを対話的に操作するIDE。現在、以下の二つから選択できます。
+           - ProofGeneralは、Emacs上に作られたIDEです。すでにEmacsに慣れている人向けのものです。Coqとは別にインストールする必要があります。（詳しくはgoogleで"ProofGeneral"を検索してください）
+           - CoqIDEは、スタンドアロンで動作するシンプルなIDEです。Coqと一緒に配布されています。しかしいくつかのプラットホームではGUIライブラリなどの追加パッケージをインストールする必要があります。 *)
 
 (* ###################################################################### *)
-(** ** Exercises *)
+(* ** Exercises *)
+(** ** 練習問題について *)
 
-(** Each chapter includes numerous exercises.  Each is marked with a
+(* Each chapter includes numerous exercises.  Each is marked with a
     "star rating," which can be interpreted as follows:
 
        - One star: easy exercises that underscore points in the text
@@ -366,17 +410,33 @@
     return, a deeper contact with the material).  "Optional" exercises
     provide a bit of extra practice with key concepts and introduce
     secondary themes that may be of interest to some readers. *)
+(** 各章には、たくさんの練習問題がついています。練習問題についている星印の数には、以下のような意味があります。
+
+        - ★　テキストのポイントを強調する簡単な問題で、たいていの読者は1〜2分でできる。遭遇したら取り組むことを習慣にしましょう。
+ 
+       - ★★　素直で簡単な問題（5〜10分でできるでしょう）
+
+       - ★★★　少し考えないといけない問題（15〜30分ほどかかるでしょう）
+
+       - ★★★★　さらに難しい問題（1〜2時間）
+
+「発展(advanced)」「任意(optional)」と記されている問題があります。
+章の主要な題材はいずれの印もない問題だけで充分カバーできます。
+"発展"問題はさらに挑戦したい（そしてその見返りとしての題材の深い理解を得たい）読者のためのものです。"任意"問題は主な概念に関する少し追加の練習を提供し、読者によっては興味をもつ副次的な話題を紹介しています。 *)
 
 (* ###################################################################### *)
-(** ** Chapter Dependencies *)
+(* ** Chapter Dependencies *)
+(** ** 章間の依存関係 *)
 
-(** A diagram of the dependencies between chapters and some suggested
+(*  A diagram of the dependencies between chapters and some suggested
     paths through the material can be found in the file [deps.html]. *)
+(** 章と章の間の依存関係と推奨する学習順序をまとめた図を[deps_J.html]にまとめてあります。 *)
 
 (* ###################################################################### *)
-(** ** Downloading the Coq Files *)
+(* ** Downloading the Coq Files *)
+(** ** 本教材Coqファイルの入手方法 *)
 
-(** A tar file containing the full sources for the "release version"
+(*  A tar file containing the full sources for the "release version"
     of these notes (as a collection of Coq scripts and HTML files) is
     available here:
 <<
@@ -386,11 +446,18 @@
     access to a locally extended version of the files, which you
     should use instead of the release version.
 *)
+(** この教材のリリース版のソース（CoqスクリプトとHTMLファイル）をtarで固めたものが、以下のURLで取得できます。
+<<
+        http://www.cis.upenn.edu/~bcpierce/sf
+>>
+    この資料を講義で利用している場合は、リリース版ではなくローカルに展開された版にアクセスする権限が与えられているかもしれません。
+*)
 
 (* ###################################################################### *)
-(** * Note for Instructors *)
+(*  * Note for Instructors *)
+(** * 教育関係者へ *)
 
-(** If you intend to use these materials in your own course, you will
+(*  If you intend to use these materials in your own course, you will
     undoubtedly find things you'd like to change, improve, or add.
     Your contributions are welcome!
 
@@ -398,6 +465,9 @@
     read/write access to our subversion repository and developers'
     mailing list; in the repository you'll find a [README] with further
     instructions. *)
+(** この資料を自分の講義で使おうと思った場合、ほぼまちがいなくあなたは書き直したり、追加したりしたいところが出てくるでしょう。そういった貢献は大歓迎です。
+
+ぜひBenjamin Pierceまでemailをください。subversionのリポジトリと開発者メーリングリストにアカウントを用意します。リポジトリにはREADMEファイルがありますので、次にどうすべきかはそれを参照してください。 *)
 
 (* ###################################################################### *)
 (** * Translations *)
